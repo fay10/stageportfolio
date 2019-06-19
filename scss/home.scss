@@ -15,6 +15,10 @@ body {
   font-family: 'Graphik-Regular';
 }
 
+a {
+  color: black;
+}
+
 .position {
   &__column {
     width: 83%;
@@ -120,8 +124,9 @@ a {
    align-items: center;
    display: flex;
    font-size: 12px;
-   p {
+   a {
      justify-content: center;
+     color: black;
      &:nth-child(n+2) {
        padding-left: 14rem;
      }
