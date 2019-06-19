@@ -1,0 +1,408 @@
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../fonts/graphik-regular.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+$xlarge: 1920px;
+$large: 1280px;
+$medium: 960px;
+$small: 750px;
+$esmall: 375px;
+
+body {
+  font-family: 'Graphik-Regular';
+}
+
+.leerprojecten {
+  width: 40%;
+  margin: 0 auto;
+  &__title {
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+.position {
+  &__row {
+    display: flex;
+    justify-content: center;
+    &--second {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      margin-top: 100px;
+    }
+  }
+  &__column {
+    padding: 2rem;
+    &--second {
+      width: 50%;
+    }
+}
+}
+
+.code {
+  &__row {
+    display: flex;
+    &--second {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    &--text {
+      width: 80%;
+    }
+  }
+  &__column {
+    &--second {
+      width: 50%;
+    }
+}
+}
+
+.home {
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/hexagon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: right;
+  p{
+    color: white;
+    font-size: 12px;
+    padding: 18px;
+  }
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/arrow.png);
+  background-position: 20px;
+  float: right;
+  margin-top: 10%;
+  left: 8%;
+}
+
+.klantopdrachten {
+  float: right;
+  width: 10px;
+  margin-top: 80px;
+}
+
+.title {
+  p {
+    font-size: 21px;
+    float: left;
+    transform: rotate(90deg);
+    margin-top: 8rem;
+  }
+}
+
+.line {
+  border-left: 2px solid black;
+  height: 6rem;
+  display: flex;
+  position: absolute;
+  left: 5.2rem;
+  top: 16rem;
+}
+
+.quote {
+  font-size: 80px;
+  font-family: 'Arial';
+  margin-top: -40px;
+}
+
+.title-intake {
+    color: white;
+    width: 15rem;
+    height: 3rem;
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+
+.photo {
+  width: 20rem;
+  height: 15rem;
+  background-image: url(../img/computer.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.inleiding {
+  width: 19rem;
+}
+
+.description {
+  text-align: left;
+  border-bottom: 2px solid black;
+  &__second {
+    margin-top: 5rem;
+    text-align: left;
+  }
+}
+
+.second-description {
+  width: 60%;
+  margin: 0 auto;
+}
+
+video {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 65rem;
+}
+
+.text {
+  text-align: left;
+  padding: 60px;
+  float: none;
+  &__photo {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+}
+
+.background {
+  width: 14rem;
+  height: 28rem;
+  z-index: -99;
+  background-color: #A3C7F0;
+  position: absolute;
+}
+
+.bem {
+  background-image: url(../img/bem.png);
+  background-size: cover;
+  text-align: left;
+  display: flex;
+  margin-left: 8rem;
+}
+
+.photo-code {
+  width: 30rem;
+  height: 20rem;
+  background-image: url(../img/photo-code.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.explanation {
+  background-image: url(../img/explanation.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30rem;
+  display: flex;
+}
+
+
+.slot {
+  &__row {
+    display: flex;
+  }
+  &__column {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    &--second {
+      text-align: center;
+    }
+  }
+}
+
+
+.slot {
+  width: 50%;
+  margin: 0 auto;
+  &__background{
+    background-color: #FAD290;
+    width: 30%;
+    height: 25%;
+    left: 20px;
+    position: absolute;
+    z-index: -99;
+  }
+  &__text {
+    text-align: left;
+    margin-left: 10rem;
+  }
+}
+
+.video {
+  width: 50%;
+  margin: 0 auto;
+  &__background{
+    background-color: #FAD290;
+    width: 30%;
+    height: 25%;
+    left: 20px;
+    position: absolute;
+    z-index: -99;
+  }
+  &__video {
+    width: 40%;
+  }
+  &__text {
+    width: 66%;
+    margin: auto;
+  }
+}
+
+.scrollbox {
+  padding-right: 15px;
+  height: 20rem;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.progressbar {
+  width: 300px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 0 auto;
+  &__inside {
+    width: 50px;
+    height:20px;
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    padding: 0.4rem;
+    &--second {
+      width: 85px;
+      height:20px;
+      background-color: black;
+      font-size: 12px;
+      color: white;
+      padding: 0.4rem;
+    }
+    &--third {
+      width: 100px;
+      height:20px;
+      background-color: black;
+      font-size: 12px;
+      color: white;
+      padding: 0.4rem;
+    }
+    &--four {
+      width: 80px;
+      height:20px;
+      background-color: black;
+      font-size: 12px;
+      color: white;
+      padding: 0.4rem;
+    }
+  }
+}
+
+.footer {
+   position: sticky;
+   width: 100%;
+   height: 6rem;
+   background-image: url(../img/footer.png);
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-size: 12px;
+   p {
+     justify-content: center;
+     &:nth-child(n+2) {
+       padding-left: 14rem;
+     }
+   }
+}
+
+@media screen and (max-width: $medium) {
+  .arrow {
+    display: none;
+  }
+  .position {
+    &__row {
+      display: inline-block;
+      width: 100%;
+    }
+    &__column {
+      width: 45%;
+      margin: 0 auto;
+    }
+  }
+  .inleiding {
+    margin: 0 auto;
+  }
+  video {
+    width: 40rem;
+  }
+ }
+
+@media screen and (max-width: $small) {
+  .position {
+  &__column {
+    width: 82%;
+  }
+  }
+  .progressbar {
+    width: 200px;
+  }
+  .bem {
+    display: none;
+  }
+  .text {
+    padding: 0;
+    width: 100%;
+  }
+  .explanation {
+    display: none;
+  }
+  .slot {
+    &__row {
+      display: inline-block;
+    }
+    &__text {
+      margin-left: 0;
+    }
+  }
+  video {
+     width: 20rem;
+  }
+  .video {
+    &__row {
+      margin-top: 6rem;
+    }
+    &__video {
+      width: 20rem;
+    }
+  }
+  .footer {
+    display: inline-block;
+    height: 12rem;
+    p:nth-child(n+2) {
+      padding: 0;
+    }
+    p {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+ }

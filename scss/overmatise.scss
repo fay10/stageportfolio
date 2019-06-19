@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../fonts/graphik-regular.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+$xlarge: 1920px;
+$large: 1280px;
+$medium: 960px;
+$small: 750px;
+$esmall: 375px;
+
+body {
+  font-family: 'Graphik-Regular';
+}
+
+.position {
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+  &__column {
+    min-width: 30%;
+    padding: 2rem;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    &--second {
+      width: 50%;
+      height: 10rem;
+    }
+}
+}
+
+.home {
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/hexagon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: right;
+  p{
+    color: white;
+    font-size: 12px;
+    padding: 18px;
+  }
+}
+
+
+.people {
+  max-width: 20rem;
+  height: 33rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  background-image: url(../img/cyd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.quote {
+  font-size: 80px;
+  font-family: 'Arial';
+  margin-top: -40px;
+}
+
+.groupphoto {
+  max-width: 20rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  background-image: url(../img/groepsfoto.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.description {
+  text-align: left;
+  border-bottom: 2px solid black;
+  &__second {
+    margin-top: 5rem;
+    text-align: left;
+  }
+}
+
+.client {
+    margin: 0 auto;
+    max-width: 35rem;
+}
+
+.matisebuiten {
+  background-image: url(../img/matisebuiten.png);
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position: right;
+  margin: 0 auto;
+}
+
+.werkwijze {
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+.sketch {
+  text-align: left;
+  display: flex;
+}
+
+.zeplin {
+  text-align: left;
+  display: flex;
+}
+
+.scrollbox {
+  padding-right: 15px;
+  height: 6rem;
+  overflow-y: scroll;
+}
+
+.text {
+  padding-left: 2rem;
+}
+
+.logo {
+  width: 10rem;
+  height: auto;
+  background-image: url(../img/sketch.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  &--second {
+    width: 15rem;
+    background-image: url(../img/zeplin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--third {
+    width: 8rem;
+    background-image: url(../img/slack.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--fourth {
+    width: 10rem;
+    background-image: url(../img/jira.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--fifth {
+    width: 5rem;
+    background-image: url(../img/abstract.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--six {
+    width: 10rem;
+    background-image: url(../img/github.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--seven {
+    width: 10rem;
+    background-image: url(../img/harvest.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &--eight {
+    width: 12rem;
+    background-image: url(../img/codeship.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+video {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+
+.ticket {
+  &__row {
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+  }
+  &__column {
+    width: 50%;
+    padding: 2rem;
+    border: 1px solid white;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+}
+
+.ticket {
+  max-width: 50%;
+  height: 43rem;
+  background-image: url(../img/ticket.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.branches {
+  height: auto;
+  border: 1px solid black;
+  &__text {
+    padding: 20px;
+  }
+}
+
+.slot {
+    background-color: black;
+    color: white;
+    padding: 40px;
+  }
+
+  .footer {
+     position: sticky;
+     width: 100%;
+     height: 6rem;
+     background-image: url(../img/footer.png);
+     justify-content: center;
+     align-items: center;
+     display: flex;
+     font-size: 12px;
+     p {
+       justify-content: center;
+       &:nth-child(n+2) {
+         padding-left: 14rem;
+       }
+     }
+  }
+
+  @media screen and (max-width: $medium) {
+    .position {
+      &__row {
+        display: inline-block
+      }
+      &__column {
+         width: 100%;
+         padding: 0px;
+         margin-top: 5rem;
+         &--second {
+           min-width: 50%;
+           margin: 0 auto;
+         }
+      }
+    }
+    .overmatise {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .werkwijze{
+      width: 100%;
+    }
+    .description{
+      &__second {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+    video {
+      width: 40rem;
+    }
+    .ticket {
+      &__row {
+        display: flex;
+        justify-content: center;
+        padding: 80px;
+      }
+      &__column {
+        padding: 0px;
+        max-width: 100%;
+    }
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    .client {
+      padding: 35px;
+    }
+    .position {
+      &__column {
+        &--second {
+          min-width: 65%;
+          margin-bottom: 60px;
+        }
+      }
+    }
+    video {
+      width: 20rem;
+    }
+    .ticket {
+      display: none;
+      &__row {
+        width: 100%;
+        padding: 0;
+      }
+      &__column{
+        width: 100%;
+      }
+    }
+    .footer {
+      display: inline-block;
+      height: 12rem;
+      p:nth-child(n+2) {
+        padding: 0;
+      }
+      p {
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+  }

@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../fonts/graphik-regular.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+$xlarge: 1920px;
+$large: 1280px;
+$medium: 960px;
+$small: 750px;
+$esmall: 375px;
+
+body {
+  font-family: 'Graphik-Regular';
+}
+
+.home {
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/hexagon.png);
+  background-size: contain;
+  background-position: 80px;
+  float: right;
+  p{
+    color: white;
+    font-size: 12px;
+    padding: 18px;
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-info {
+  font-size: 16px;
+  position: sticky;
+  width: 100%;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  a {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+.title {
+  font-size: 21px;
+  padding: 20px;
+  text-align: center;
+}
+
+.moodboard {
+  width: 80%;
+  height: 40rem;
+  background-image: url(../img/moodboard.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.title-intake {
+    color: white;
+    width: 12rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+.position {
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+  &__column {
+    display: inline-block;
+    padding: 2rem;
+    width: 30%;
+    padding: 40px;
+    float: left;
+    border: 1px solid white;
+  }
+}
+
+.bronvermelding {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+
+.footer {
+   position: sticky;
+   width: 100%;
+   height: 6rem;
+   background-image: url(../img/footer.png);
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-size: 12px;
+   p {
+     justify-content: center;
+     &:nth-child(n+2) {
+       padding-left: 14rem;
+     }
+   }
+}
+
+@media screen and (max-width: $medium) {
+  .title {
+      margin-top: -120px;
+    }
+}
+
+@media screen and (max-width: $small) {
+
+  .moodboard {
+    background-size: cover;
+  }
+
+  .position {
+    &__row {
+      display: inline-block;
+      width: 80%;
+    }
+    &__column {
+      float: none;
+      width: 80%;
+    }
+  }
+
+  .bronvermelding {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+
+  .footer {
+    display: inline-block;
+    height: 12rem;
+    p:nth-child(n+2) {
+      padding: 0;
+    }
+    p {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+  .footer-info {
+    display: inline-block;
+    text-align: center;
+  }
+  .title {
+    font-size: 21px;
+    padding: 20px;
+    text-align: center;
+  }
+}

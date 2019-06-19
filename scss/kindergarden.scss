@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../fonts/graphik-regular.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+$xlarge: 1920px;
+$large: 1280px;
+$medium: 960px;
+$small: 750px;
+$esmall: 375px;
+
+body {
+  font-family: 'Graphik-Regular';
+}
+
+.home {
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/hexagon.png);
+  background-size: contain;
+  background-position: 80px;
+  float: right;
+  p{
+    color: white;
+    font-size: 12px;
+    padding: 18px;
+  }
+}
+
+
+.intro {
+  width: 50%;
+  margin: 0 auto;
+  &__second {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.position {
+&__row {
+  display: flex;
+}
+  &__column {
+    height: 100px;
+    width: 300px;
+    background-image: url(../img/kinderwordpress1.png);
+    background-size: cover;
+    padding: 2rem;
+    float: left;
+    border: 1px solid white;
+    &--second {
+      background-image: url(../img/kinderwordpress2.png);
+      background-size: contain;
+    }
+  }
+}
+
+.wrap-collapsible {
+	width: 100%;
+}
+
+.wrap-collapsible>input {
+  display: none;
+}
+
+.wrap-collapsible>label {
+  display: block;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+  text-align: center;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.collapsible-content .content-inner {
+  background: #EAEAEA;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+[id^="collapsibletoggle"]:checked + label {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+[id^="collapsibletoggle"]:checked + label::after {
+  transform: rotate(90deg);
+}
+
+[id^="collapsibletoggle"]:checked + label + .collapsible-content {
+  max-height: 100%;
+}
+
+.tooltip {
+	&-container {
+		position: relative;
+		width: 50rem;
+		max-width: 100%;
+    margin: 0 auto;
+	}
+
+	&-image {
+    background-image: url(../img/kindergarden.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 132rem;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+		img {
+			position: relative;
+			max-width: 100%;
+		}
+		.tooltip-point {
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: #fff;
+			border: 3px solid black;
+			text-align: center;
+			border-radius: 50%;
+			line-height: 40px;
+			cursor: pointer;
+			box-shadow: 0 5px 7px rgba(0,0,0,.3);
+
+			&:hover {
+				+ .tooltip-content {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&-content {
+		display: block;
+		background: rgba(0,0,0,.7);
+		position: absolute;
+		left: 0;
+		right: 0;
+		color: #fff;
+		padding: 10px;
+		opacity: 0;
+		transition: .3s ease-in-out all;
+		border-radius: 7px;
+		border: 2px solid #ccc;
+		box-shadow: 0 5px 7px rgba(0,0,0,.3);
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+video {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 65rem;
+}
+
+.progressbar {
+  max-width: 300px;
+  height: 30px;
+  border: 2px solid black;
+  margin: 0 auto;
+  &__inside {
+    width: 110px;
+    height:20px;
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    padding: 0.4rem;
+  }
+}
+
+.slot {
+  &__column {
+    text-align: center;
+  }
+}
+
+.footer {
+   position: sticky;
+   width: 100%;
+   height: 6rem;
+   background-image: url(../img/footer.png);
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-size: 12px;
+   p {
+     justify-content: center;
+     &:nth-child(n+2) {
+       padding-left: 14rem;
+     }
+   }
+}
+
+@media screen and (max-width: $medium) {
+  video {
+    width: 40rem;
+  }
+ }
+
+
+ @media screen and (max-width: $small) {
+   video {
+     width: 20rem;
+   }
+   .intro {
+     width: 100%;
+   }
+   .footer {
+     display: inline-block;
+     height: 12rem;
+     p:nth-child(n+2) {
+       padding: 0;
+     }
+     p {
+       text-align: center;
+       margin-top: 40px;
+     }
+   }
+  }
