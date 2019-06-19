@@ -16,10 +16,28 @@
     <section class="position__row">
       <div class="position__column position__column">
         <p class="title">De mensen van Matise</p>
-        <div class="people">
-        </div>
+        <br><br>
+        <div id="slider">
+      <div class="slide">
+      <img src="img/cyd.jpg" alt="">
+      <img src="img/dennis.jpg" alt="">
+      <img src="img/jantine.jpg" alt="">
+      <img src="img/maurits.jpg" alt="">
+      <img src="img/merijn.jpg" alt="">
+      <img src="img/roosje.jpg" alt="">
+      <img src="img/rox.jpg" alt="">
+      <img src="img/seb.jpg" alt="">
+      <img src="img/sill.jpg" alt="">
+      <img src="img/stephan.jpg" alt="">
+      <img src="img/tim.jpg" alt="">
       </div>
-        <div class="position__column position__column">
+      <div class="buttons">
+        <button class="btn-left">&lt</button>
+        <button class="btn-right">&gt</button>
+      </div>
+    </div>
+      </div>
+        <div class="position__column position__column--matise">
           <tbody>
            <tr>
               <td width="74" valign="top" style="width: 74px; margin: 0; padding: 0;">
@@ -219,6 +237,86 @@
       </div>
     </section>
     </section>
+    <script>
+
+    function Slider(el){
+      let self = this,
+          _slide = null,
+          _dots = null,
+          _buttons = null;
+
+      this.el = el;
+
+      function init(){
+        _slide = self.el.querySelectorAll('.slide img');
+        _dots = self.el.querySelector('.dots-list');
+        _buttons = self.el.querySelector('.buttons');
+        self.currentSlide = 0;
+
+        _buttons.querySelector('.btn-left').addEventListener('click',function(){
+          if(self.currentSlide > 0){
+            self.showSlide(self.currentSlide - 1)
+          }
+          self.showSlide(_slide.length -1);
+        });
+
+        _buttons.querySelector('.btn-right').addEventListener('click',function(){
+          if(self.currentSlide < _slide.length - 1){
+            self.showSlide(self.currentSlide + 1)
+          }
+          self.showSlide(0);
+        });
+
+        buildDots();
+        self.showSlide(0);
+
+
+      };
+
+
+
+      function buildDots(){
+        if(!_dots){
+          _dots = document.createElement('div');
+          _dots.classList.add('dots-list');
+          self.el.appendChild(_dots);
+        }
+        for(let i = 0; i < _slide.length; i++){
+          let dot = document.createElement('span');
+          dot.classList.add('dots-item');
+
+          dot.addEventListener('click', self.showSlide.bind(self,i));
+          _dots.appendChild(dot);
+          _slide[i].dot = dot;
+        };
+      };
+
+
+
+      this.showSlide = function(slideIndex){
+        let oldSlide = _slide[this.currentSlide];
+        let newSlide = _slide[slideIndex];
+        if(oldSlide){
+          oldSlide.style.opacity = 0;
+          oldSlide.dot.classList.remove('active');
+        }
+        newSlide.style.opacity = 1;
+        newSlide.dot.classList.add('active');
+
+        this.currentSlide = slideIndex;
+
+        return true;
+      }
+
+      init();
+
+    };
+
+    let slider = new Slider(document.getElementById('slider'));
+
+
+
+    </script>
   </body>
   <footer class="footer">
   <a href="footer.html"><p>bronvermelding</p></a>

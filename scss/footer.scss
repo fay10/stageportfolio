@@ -13,6 +13,10 @@ $esmall: 375px;
 
 body {
   font-family: 'Graphik-Regular';
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .home {
@@ -105,7 +109,7 @@ a {
    align-items: center;
    display: flex;
    font-size: 12px;
-   p {
+   a {
      justify-content: center;
      &:nth-child(n+2) {
        padding-left: 14rem;
@@ -148,9 +152,8 @@ a {
     p:nth-child(n+2) {
       padding: 0;
     }
-    p {
+    a {
       text-align: center;
-      margin-top: 40px;
     }
   }
   .footer-info {

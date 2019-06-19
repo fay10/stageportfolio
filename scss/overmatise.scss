@@ -13,6 +13,10 @@ $esmall: 375px;
 
 body {
   font-family: 'Graphik-Regular';
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .position {
@@ -47,15 +51,60 @@ body {
   }
 }
 
-
-.people {
-  max-width: 20rem;
-  height: 33rem;
+#slider {
+  width: 400px;
+  height: 15rem;
   margin: 0 auto;
-  margin-top: 2.5rem;
-  background-image: url(../img/cyd.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.slide img {
+  transition: all 1.5s;
+  height: 28rem;
+  opacity: 0;
+  position: absolute;
+  left: 2rem;
+}
+
+.slide img:first-child{
+  opacity: 1;
+}
+
+.show {
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-left:active, .btn-right:active {
+  transform: translateY(-45%) scale(0.97);
+}
+
+.dots-list {
+  position: absolute;
+  bottom: -8rem;
+  left:50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots-item {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.dots-item.active {
+  background: white;
 }
 
 .quote {
@@ -231,7 +280,7 @@ video {
      align-items: center;
      display: flex;
      font-size: 12px;
-     p {
+     a {
        justify-content: center;
        &:nth-child(n+2) {
          padding-left: 14rem;
@@ -251,6 +300,9 @@ video {
          &--second {
            min-width: 50%;
            margin: 0 auto;
+         }
+         &--matise {
+           margin-top: 11rem;
          }
       }
     }
@@ -287,6 +339,9 @@ video {
     .client {
       padding: 35px;
     }
+    .slide img {
+      height: 24rem;
+    }
     .position {
       &__column {
         &--second {
@@ -314,9 +369,8 @@ video {
       p:nth-child(n+2) {
         padding: 0;
       }
-      p {
+      a {
         text-align: center;
-        margin-top: 40px;
       }
     }
   }

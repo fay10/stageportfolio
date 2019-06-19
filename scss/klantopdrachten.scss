@@ -13,6 +13,10 @@ $esmall: 375px;
 
 body {
   font-family: 'Graphik-Regular';
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 
@@ -73,6 +77,11 @@ body {
   background-image: url(../img/klantopdracht.png);
   background-size: cover;
   margin: 0 auto;
+  &__text {
+    position: absolute;
+    left: 160px;
+    top: 48px;
+  }
 }
 
 video {
@@ -320,7 +329,7 @@ video {
    align-items: center;
    display: flex;
    font-size: 12px;
-   p {
+   a {
      justify-content: center;
      &:nth-child(n+2) {
        padding-left: 14rem;
@@ -389,9 +398,8 @@ video {
     p:nth-child(n+2) {
       padding: 0;
     }
-    p {
+    a {
       text-align: center;
-      margin-top: 40px;
     }
   }
   .slot {

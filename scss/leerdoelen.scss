@@ -149,10 +149,22 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     &--second {
-      background-image: url(../img/leerdoel2.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+    background-image: url(../img/leerdoel2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    &--third {
+    background-image: url(../img/leerdoel3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    &--fourth {
+    background-image: url(../img/leerdoel4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     }
   }
 }
@@ -204,7 +216,7 @@ a {
    align-items: center;
    display: flex;
    font-size: 12px;
-   p {
+   a {
      justify-content: center;
      &:nth-child(n+2) {
        padding-left: 14rem;
@@ -291,9 +303,8 @@ a {
     p:nth-child(n+2) {
       padding: 0;
     }
-    p {
+    a {
       text-align: center;
-      margin-top: 40px;
     }
   }
 }
