@@ -220,7 +220,7 @@ video {
 
   .scrollbox-third {
     padding-right: 15px;
-    height: 10rem;
+    height: 7rem;
     overflow-y: scroll;
   }
 
@@ -300,6 +300,7 @@ video {
     &--second {
       width: 90%;
       padding: 30px;
+      background: black;
     }
   }
 }
