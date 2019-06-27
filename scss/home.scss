@@ -22,7 +22,7 @@ a {
 .position {
   &__column {
     width: 83%;
-    height: auto;
+    min-height: 45rem;
     padding: 2rem;
     display: inline-block;
     float: left;
